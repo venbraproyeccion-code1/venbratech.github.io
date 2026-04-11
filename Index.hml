@@ -1,466 +1,129 @@
 <!DOCTYPE html>
-<html lang=3D"en">
+<html lang="en">
 <head>
-<meta charset=3D"UTF-8">
-<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
-0">
-<title>VenBra Tech =E2=80=94 Smart Digital Solutions</title>
-<meta name=3D"description" content=3D"VenBra Tech: AI tools, cybersecurity,
-digital products and travel experiences.">
-<link rel=3D"preconnect" href=3D"https://fonts.googleapis.com">
-<link href=3D"
-https://fonts.googleapis.com/css2?family=3DOutfit:wght@300;400;500;600;700;=
-800&family=3DJetBrains+Mono:wght@400;500&display=3Dswap"
-rel=3D"stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VenBra Tech — Smart Digital Solutions</title>
+<meta name="description" content="VenBra Tech: AI tools, cybersecurity, digital products and travel experiences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a28;--accent:#00e5a0;--accent2:#=
-00c2ff;--accent3:#7b61ff;--text:#e8e8f0;--text2:#9090a8;--text3:#606078;--g=
-low:0
-0 40px rgba(0,229,160,.15)}
+:root{--bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a28;--accent:#00e5a0;--accent2:#00c2ff;--accent3:#7b61ff;--text:#e8e8f0;--text2:#9090a8;--text3:#606078;--glow:0 0 40px rgba(0,229,160,.15)}
 html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text)=
-;overflow-x:hidden;line-height:1.6}
-.header{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px
-40px;display:flex;align-items:center;justify-content:space-between;backdrop=
--filter:blur(20px);background:rgba(10,10,15,.8);border-bottom:1px
-solid rgba(255,255,255,.05)}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+.header{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(20px);background:rgba(10,10,15,.8);border-bottom:1px solid rgba(255,255,255,.05)}
 .logo{font-size:1.5rem;font-weight:700;color:var(--accent)}
 .logo span{color:var(--text)}
 .nav{display:flex;gap:30px;align-items:center}
-.nav
-a{color:var(--text2);text-decoration:none;font-size:.9rem;font-weight:500;t=
-ransition:color
-.3s}
+.nav a{color:var(--text2);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .3s}
 .nav a:hover{color:var(--accent)}
-.nav-btn{background:var(--accent);color:var(--bg);padding:10px
-24px;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none=
-;transition:all
-.3s}
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:cente=
-r;justify-content:center;text-align:center;padding:120px
-20px 80px;position:relative}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px
-20px;border-radius:50px;background:rgba(0,229,160,.1);border:1px solid
-rgba(0,229,160,.2);color:var(--accent);font-size:.85rem;font-weight:500;mar=
-gin-bottom:30px}
-.hero
-h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:800;line-height:1.1;margin-=
-bottom:24px;letter-spacing:-2px}
-.hero h1
-.gradient{background:linear-gradient(135deg,var(--accent),var(--accent2),va=
-r(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transpar=
-ent;background-clip:text}
-.hero
-p{font-size:clamp(1rem,2vw,1.25rem);color:var(--text2);max-width:600px;marg=
-in-bottom:40px}
+.nav-btn{background:var(--accent);color:var(--bg);padding:10px 24px;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .3s}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 20px 80px;position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:50px;background:rgba(0,229,160,.1);border:1px solid rgba(0,229,160,.2);color:var(--accent);font-size:.85rem;font-weight:500;margin-bottom:30px}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:800;line-height:1.1;margin-bottom:24px;letter-spacing:-2px}
+.hero h1 .gradient{background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:clamp(1rem,2vw,1.25rem);color:var(--text2);max-width:600px;margin-bottom:40px}
 .hero-buttons{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
-.btn-primary{background:var(--accent);color:var(--bg);padding:14px
-32px;border-radius:10px;font-weight:600;font-size:1rem;text-decoration:none=
-;transition:all
-.3s;border:none;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--bg);padding:14px 32px;border-radius:10px;font-weight:600;font-size:1rem;text-decoration:none;transition:all .3s;border:none;cursor:pointer}
 .btn-primary:hover{box-shadow:var(--glow);transform:translateY(-2px)}
-.btn-secondary{background:transparent;color:var(--text);padding:14px
-32px;border-radius:10px;font-weight:600;font-size:1rem;text-decoration:none=
-;transition:all
-.3s;border:1px solid rgba(255,255,255,.15)}
+.btn-secondary{background:transparent;color:var(--text);padding:14px 32px;border-radius:10px;font-weight:600;font-size:1rem;text-decoration:none;transition:all .3s;border:1px solid rgba(255,255,255,.15)}
 .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
 .section{padding:100px 40px;max-width:1200px;margin:0 auto}
-.section-label{font-family:'JetBrains
-Mono',monospace;font-size:.8rem;color:var(--accent);text-transform:uppercas=
-e;letter-spacing:3px;margin-bottom:12px}
-.section-title{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacin=
-g:-1px;margin-bottom:20px}
-.section-desc{color:var(--text2);font-size:1.1rem;max-width:600px;margin-bo=
-ttom:50px}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(30=
-0px,1fr));gap:24px}
-.service-card{background:var(--bg2);border:1px solid
-rgba(255,255,255,.05);border-radius:16px;padding:36px;transition:all
-.4s;position:relative;overflow:hidden}
-.service-card:hover{border-color:rgba(0,229,160,.2);transform:translateY(-4=
-px);box-shadow:var(--glow)}
-.service-icon{width:48px;height:48px;border-radius:12px;background:rgba(0,2=
-29,160,.1);display:flex;align-items:center;justify-content:center;font-size=
-:1.5rem;margin-bottom:20px}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);text-transform:uppercase;letter-spacing:3px;margin-bottom:12px}
+.section-title{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-1px;margin-bottom:20px}
+.section-desc{color:var(--text2);font-size:1.1rem;max-width:600px;margin-bottom:50px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.service-card{background:var(--bg2);border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:36px;transition:all .4s;position:relative;overflow:hidden}
+.service-card:hover{border-color:rgba(0,229,160,.2);transform:translateY(-4px);box-shadow:var(--glow)}
+.service-icon{width:48px;height:48px;border-radius:12px;background:rgba(0,229,160,.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px}
 .service-card h3{font-size:1.25rem;font-weight:600;margin-bottom:12px}
 .service-card p{color:var(--text2);font-size:.95rem;line-height:1.6}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr)=
-);gap:32px;padding:60px
-0;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid
-rgba(255,255,255,.05);margin:60px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;padding:60px 0;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);margin:60px 0}
 .stat{text-align:center}
-.stat-number{font-size:2.5rem;font-weight:800;background:linear-gradient(13=
-5deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-tex=
-t-fill-color:transparent;background-clip:text}
+.stat-number{font-size:2.5rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat-label{color:var(--text2);font-size:.9rem;margin-top:4px}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(28=
-0px,1fr));gap:24px}
-.product-card{background:var(--bg2);border:1px solid
-rgba(255,255,255,.05);border-radius:16px;overflow:hidden;transition:all .4s=
-}
-.product-card:hover{border-color:rgba(0,194,255,.2);transform:translateY(-4=
-px)}
-.product-img{height:200px;background:linear-gradient(135deg,var(--bg3),var(=
---bg2));display:flex;align-items:center;justify-content:center;font-size:3r=
-em}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.product-card{background:var(--bg2);border:1px solid rgba(255,255,255,.05);border-radius:16px;overflow:hidden;transition:all .4s}
+.product-card:hover{border-color:rgba(0,194,255,.2);transform:translateY(-4px)}
+.product-img{height:200px;background:linear-gradient(135deg,var(--bg3),var(--bg2));display:flex;align-items:center;justify-content:center;font-size:3rem}
 .product-info{padding:24px}
 .product-info h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
 .product-info p{color:var(--text2);font-size:.9rem;margin-bottom:16px}
-.product-tag{display:inline-block;padding:4px
-12px;border-radius:20px;font-size:.75rem;font-weight:500;background:rgba(0,=
-229,160,.1);color:var(--accent)}
+.product-tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:500;background:rgba(0,229,160,.1);color:var(--accent)}
 .cta{text-align:center;padding:100px 40px}
-.cta-box{background:linear-gradient(135deg,rgba(0,229,160,.08),rgba(0,194,2=
-55,.08));border:1px
-solid rgba(0,229,160,.15);border-radius:24px;padding:60px
-40px;max-width:800px;margin:0 auto}
-.cta-box
-h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;margin-bottom:16px}
+.cta-box{background:linear-gradient(135deg,rgba(0,229,160,.08),rgba(0,194,255,.08));border:1px solid rgba(0,229,160,.15);border-radius:24px;padding:60px 40px;max-width:800px;margin:0 auto}
+.cta-box h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;margin-bottom:16px}
 .cta-box p{color:var(--text2);font-size:1.1rem;margin-bottom:32px}
-.footer{padding:40px;text-align:center;border-top:1px solid
-rgba(255,255,255,.05);color:var(--text3);font-size:.85rem}
+.footer{padding:40px;text-align:center;border-top:1px solid rgba(255,255,255,.05);color:var(--text3);font-size:.85rem}
 .footer a{color:var(--accent);text-decoration:none}
-@media(max-width:768px){.header{padding:16px
-20px}.nav{display:none}.section{padding:60px 20px}.hero{padding:100px 20px
-60px}.hero h1{font-size:2.2rem}.cta-box{padding:40px 24px}}
+@media(max-width:768px){.header{padding:16px 20px}.nav{display:none}.section{padding:60px 20px}.hero{padding:100px 20px 60px}.hero h1{font-size:2.2rem}.cta-box{padding:40px 24px}}
 </style>
 </head>
 <body>
-<header class=3D"header">
-<div class=3D"logo">Ven<span>Bra</span> Tech</div>
-<nav class=3D"nav">
-<a href=3D"#services">Services</a>
-<a href=3D"#products">Products</a>
-<a href=3D"#about">About</a>
-<a href=3D"#contact" class=3D"nav-btn">Contact</a>
+<header class="header">
+<div class="logo">Ven<span>Bra</span> Tech</div>
+<nav class="nav">
+<a href="#services">Services</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact" class="nav-btn">Contact</a>
 </nav>
 </header>
-<section class=3D"hero">
-<div class=3D"hero-badge">Powered by AI</div>
-<h1>Smart Digital<br><span class=3D"gradient">Solutions</span></h1>
-<p>AI tools, cybersecurity, digital products and curated tech
-recommendations. Empowering your digital future.</p>
-<div class=3D"hero-buttons">
-<a href=3D"#services" class=3D"btn-primary">Explore Services</a>
-<a href=3D"#products" class=3D"btn-secondary">View Products</a>
+<section class="hero">
+<div class="hero-badge">Powered by AI</div>
+<h1>Smart Digital<br><span class="gradient">Solutions</span></h1>
+<p>AI tools, cybersecurity, digital products and curated tech recommendations. Empowering your digital future.</p>
+<div class="hero-buttons">
+<a href="#services" class="btn-primary">Explore Services</a>
+<a href="#products" class="btn-secondary">View Products</a>
 </div>
 </section>
-<section class=3D"section" id=3D"services">
-<div class=3D"section-label">// What we do</div>
-<h2 class=3D"section-title">Our Services</h2>
-<p class=3D"section-desc">Intelligent digital solutions designed to protect=
-,
-optimize, and elevate your tech experience.</p>
-<div class=3D"services-grid">
-<div class=3D"service-card"><div class=3D"service-icon">=F0=9F=A4=96</div><=
-h3>AI
-Tools</h3><p>Cutting-edge artificial intelligence tools to automate tasks,
-analyze data, and boost your productivity.</p></div>
-<div class=3D"service-card"><div
-class=3D"service-icon">=F0=9F=94=92</div><h3>Cybersecurity</h3><p>Protect y=
-our digital
-assets with our advanced security solutions, vulnerability assessments, and
-monitoring.</p></div>
-<div class=3D"service-card"><div class=3D"service-icon">=F0=9F=92=BB</div><=
-h3>Digital
-Products</h3><p>Curated selection of premium digital products, software
-licenses, and tech resources for professionals.</p></div>
-<div class=3D"service-card"><div class=3D"service-icon">=F0=9F=8C=8D</div><=
-h3>Travel
-Experiences</h3><p>Tech-enhanced travel experiences with AI-powered
-recommendations and digital travel tools.</p></div>
-<div class=3D"service-card"><div class=3D"service-icon">=F0=9F=93=8A</div><=
-h3>Tech
-Consulting</h3><p>Expert guidance on technology adoption, digital
-transformation, and IT infrastructure optimization.</p></div>
-<div class=3D"service-card"><div
-class=3D"service-icon">=E2=9A=A1</div><h3>Automation</h3><p>Custom workflow
-automation solutions to save time and reduce human error in your
-operations.</p></div>
+<section class="section" id="services">
+<div class="section-label">// What we do</div>
+<h2 class="section-title">Our Services</h2>
+<p class="section-desc">Intelligent digital solutions designed to protect, optimize, and elevate your tech experience.</p>
+<div class="services-grid">
+<div class="service-card"><div class="service-icon">🤖</div><h3>AI Tools</h3><p>Cutting-edge artificial intelligence tools to automate tasks, analyze data, and boost your productivity.</p></div>
+<div class="service-card"><div class="service-icon">🔒</div><h3>Cybersecurity</h3><p>Protect your digital assets with our advanced security solutions, vulnerability assessments, and monitoring.</p></div>
+<div class="service-card"><div class="service-icon">💻</div><h3>Digital Products</h3><p>Curated selection of premium digital products, software licenses, and tech resources for professionals.</p></div>
+<div class="service-card"><div class="service-icon">🌍</div><h3>Travel Experiences</h3><p>Tech-enhanced travel experiences with AI-powered recommendations and digital travel tools.</p></div>
+<div class="service-card"><div class="service-icon">📊</div><h3>Tech Consulting</h3><p>Expert guidance on technology adoption, digital transformation, and IT infrastructure optimization.</p></div>
+<div class="service-card"><div class="service-icon">⚡</div><h3>Automation</h3><p>Custom workflow automation solutions to save time and reduce human error in your operations.</p></div>
 </div>
 </section>
-<div class=3D"section">
-<div class=3D"stats">
-<div class=3D"stat"><div class=3D"stat-number">50+</div><div
-class=3D"stat-label">AI Tools Curated</div></div>
-<div class=3D"stat"><div class=3D"stat-number">99.9%</div><div
-class=3D"stat-label">Uptime Security</div></div>
-<div class=3D"stat"><div class=3D"stat-number">500+</div><div
-class=3D"stat-label">Happy Clients</div></div>
-<div class=3D"stat"><div class=3D"stat-number">24/7</div><div
-class=3D"stat-label">Support Available</div></div>
+<div class="section">
+<div class="stats">
+<div class="stat"><div class="stat-number">50+</div><div class="stat-label">AI Tools Curated</div></div>
+<div class="stat"><div class="stat-number">99.9%</div><div class="stat-label">Uptime Security</div></div>
+<div class="stat"><div class="stat-number">500+</div><div class="stat-label">Happy Clients</div></div>
+<div class="stat"><div class="stat-number">24/7</div><div class="stat-label">Support Available</div></div>
 </div>
 </div>
-<section class=3D"section" id=3D"products">
-<div class=3D"section-label">// Featured</div>
-<h2 class=3D"section-title">Digital Products</h2>
-<p class=3D"section-desc">Hand-picked digital tools and products to power
-your workflow.</p>
-<div class=3D"products-grid">
-<div class=3D"product-card"><div class=3D"product-img">=F0=9F=9B=A1=EF=B8=
-=8F</div><div
-class=3D"product-info"><h3>VenBra Shield</h3><p>Complete cybersecurity suit=
-e
-for small businesses and freelancers.</p><span
-class=3D"product-tag">Security</span></div></div>
-<div class=3D"product-card"><div class=3D"product-img">=F0=9F=A7=A0</div><d=
-iv
-class=3D"product-info"><h3>AI Assistant Pro</h3><p>Your personal AI assista=
-nt
-for daily tasks, research, and content creation.</p><span
-class=3D"product-tag">AI Tool</span></div></div>
-<div class=3D"product-card"><div class=3D"product-img">=F0=9F=93=88</div><d=
-iv
-class=3D"product-info"><h3>Data Analytics Kit</h3><p>Powerful analytics
-dashboard to track and visualize your business metrics.</p><span
-class=3D"product-tag">Analytics</span></div></div>
+<section class="section" id="products">
+<div class="section-label">// Featured</div>
+<h2 class="section-title">Digital Products</h2>
+<p class="section-desc">Hand-picked digital tools and products to power your workflow.</p>
+<div class="products-grid">
+<div class="product-card"><div class="product-img">🛡️</div><div class="product-info"><h3>VenBra Shield</h3><p>Complete cybersecurity suite for small businesses and freelancers.</p><span class="product-tag">Security</span></div></div>
+<div class="product-card"><div class="product-img">🧠</div><div class="product-info"><h3>AI Assistant Pro</h3><p>Your personal AI assistant for daily tasks, research, and content creation.</p><span class="product-tag">AI Tool</span></div></div>
+<div class="product-card"><div class="product-img">📈</div><div class="product-info"><h3>Data Analytics Kit</h3><p>Powerful analytics dashboard to track and visualize your business metrics.</p><span class="product-tag">Analytics</span></div></div>
 </div>
 </section>
-<section class=3D"section" id=3D"about">
-<div class=3D"section-label">// Who we are</div>
-<h2 class=3D"section-title">About VenBra Tech</h2>
-<p class=3D"section-desc">We are a team passionate about technology and
-innovation. Our mission is to democratize access to intelligent digital
-solutions, making AI tools, cybersecurity, and premium digital products
-accessible to everyone.</p>
+<section class="section" id="about">
+<div class="section-label">// Who we are</div>
+<h2 class="section-title">About VenBra Tech</h2>
+<p class="section-desc">We are a team passionate about technology and innovation. Our mission is to democratize access to intelligent digital solutions, making AI tools, cybersecurity, and premium digital products accessible to everyone.</p>
 </section>
-<section class=3D"cta" id=3D"contact">
-<div class=3D"cta-box">
+<section class="cta" id="contact">
+<div class="cta-box">
 <h2>Ready to Go Digital?</h2>
-<p>Let's build your digital future together. Get in touch and discover how
-we can help.</p>
-<a href=3D"mailto:contact@venbratech.com" class=3D"btn-primary">Get Started=
-</a>
+<p>Let's build your digital future together. Get in touch and discover how we can help.</p>
+<a href="mailto:contact@venbratech.com" class="btn-primary">Get Started</a>
 </div>
 </section>
-<footer class=3D"footer">
-<p>&copy; 2026 <a href=3D"#">VenBra Tech</a>. All rights reserved. Powered =
-by
-AI.</p>
+<footer class="footer">
+<p>&copy; 2026 <a href="#">VenBra Tech</a>. All rights reserved. Powered by AI.</p>
 </footer>
 </body>
 </html>
-
---000000000000318109064f3209a1
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"auto"><div dir=3D"auto">&lt;!DOCTYPE html&gt;</div><div dir=3D"=
-auto">&lt;html lang=3D&quot;en&quot;&gt;</div><div dir=3D"auto">&lt;head&gt=
-;</div><div dir=3D"auto">&lt;meta charset=3D&quot;UTF-8&quot;&gt;</div><div=
- dir=3D"auto">&lt;meta name=3D&quot;viewport&quot; content=3D&quot;width=3D=
-device-width, initial-scale=3D1.0&quot;&gt;</div><div dir=3D"auto">&lt;titl=
-e&gt;VenBra Tech =E2=80=94 Smart Digital Solutions&lt;/title&gt;</div><div =
-dir=3D"auto">&lt;meta name=3D&quot;description&quot; content=3D&quot;VenBra=
- Tech: AI tools, cybersecurity, digital products and travel experiences.&qu=
-ot;&gt;</div><div dir=3D"auto">&lt;link rel=3D&quot;preconnect&quot; href=
-=3D&quot;<a href=3D"https://fonts.googleapis.com">https://fonts.googleapis.=
-com</a>&quot;&gt;</div><div dir=3D"auto">&lt;link href=3D&quot;<a href=3D"h=
-ttps://fonts.googleapis.com/css2?family=3DOutfit:wght@300;400;500;600;700;8=
-00&amp;family=3DJetBrains+Mono:wght@400;500&amp;display=3Dswap">https://fon=
-ts.googleapis.com/css2?family=3DOutfit:wght@300;400;500;600;700;800&amp;fam=
-ily=3DJetBrains+Mono:wght@400;500&amp;display=3Dswap</a>&quot; rel=3D&quot;=
-stylesheet&quot;&gt;</div><div dir=3D"auto">&lt;style&gt;</div><div dir=3D"=
-auto">*{margin:0;padding:0;box-sizing:border-box}</div><div dir=3D"auto">:r=
-oot{--bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a28;--accent:#00e5a0;--accent2:#00=
-c2ff;--accent3:#7b61ff;--text:#e8e8f0;--text2:#9090a8;--text3:#606078;--glo=
-w:0 0 40px rgba(0,229,160,.15)}</div><div dir=3D"auto">html{scroll-behavior=
-:smooth}</div><div dir=3D"auto">body{font-family:&#39;Outfit&#39;,sans-seri=
-f;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}=
-</div><div dir=3D"auto">.header{position:fixed;top:0;left:0;right:0;z-index=
-:100;padding:20px 40px;display:flex;align-items:center;justify-content:spac=
-e-between;backdrop-filter:blur(20px);background:rgba(10,10,15,.8);border-bo=
-ttom:1px solid rgba(255,255,255,.05)}</div><div dir=3D"auto">.logo{font-siz=
-e:1.5rem;font-weight:700;color:var(--accent)}</div><div dir=3D"auto">.logo =
-span{color:var(--text)}</div><div dir=3D"auto">.nav{display:flex;gap:30px;a=
-lign-items:center}</div><div dir=3D"auto">.nav a{color:var(--text2);text-de=
-coration:none;font-size:.9rem;font-weight:500;transition:color .3s}</div><d=
-iv dir=3D"auto">.nav a:hover{color:var(--accent)}</div><div dir=3D"auto">.n=
-av-btn{background:var(--accent);color:var(--bg);padding:10px 24px;border-ra=
-dius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:al=
-l .3s}</div><div dir=3D"auto">.hero{min-height:100vh;display:flex;flex-dire=
-ction:column;align-items:center;justify-content:center;text-align:center;pa=
-dding:120px 20px 80px;position:relative}</div><div dir=3D"auto">.hero-badge=
-{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-rad=
-ius:50px;background:rgba(0,229,160,.1);border:1px solid rgba(0,229,160,.2);=
-color:var(--accent);font-size:.85rem;font-weight:500;margin-bottom:30px}</d=
-iv><div dir=3D"auto">.hero h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:=
-800;line-height:1.1;margin-bottom:24px;letter-spacing:-2px}</div><div dir=
-=3D"auto">.hero h1 .gradient{background:linear-gradient(135deg,var(--accent=
-),var(--accent2),var(--accent3));-webkit-background-clip:text;-webkit-text-=
-fill-color:transparent;background-clip:text}</div><div dir=3D"auto">.hero p=
-{font-size:clamp(1rem,2vw,1.25rem);color:var(--text2);max-width:600px;margi=
-n-bottom:40px}</div><div dir=3D"auto">.hero-buttons{display:flex;gap:16px;f=
-lex-wrap:wrap;justify-content:center}</div><div dir=3D"auto">.btn-primary{b=
-ackground:var(--accent);color:var(--bg);padding:14px 32px;border-radius:10p=
-x;font-weight:600;font-size:1rem;text-decoration:none;transition:all .3s;bo=
-rder:none;cursor:pointer}</div><div dir=3D"auto">.btn-primary:hover{box-sha=
-dow:var(--glow);transform:translateY(-2px)}</div><div dir=3D"auto">.btn-sec=
-ondary{background:transparent;color:var(--text);padding:14px 32px;border-ra=
-dius:10px;font-weight:600;font-size:1rem;text-decoration:none;transition:al=
-l .3s;border:1px solid rgba(255,255,255,.15)}</div><div dir=3D"auto">.btn-s=
-econdary:hover{border-color:var(--accent);color:var(--accent)}</div><div di=
-r=3D"auto">.section{padding:100px 40px;max-width:1200px;margin:0 auto}</div=
-><div dir=3D"auto">.section-label{font-family:&#39;JetBrains Mono&#39;,mono=
-space;font-size:.8rem;color:var(--accent);text-transform:uppercase;letter-s=
-pacing:3px;margin-bottom:12px}</div><div dir=3D"auto">.section-title{font-s=
-ize:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-1px;margin-bottom:=
-20px}</div><div dir=3D"auto">.section-desc{color:var(--text2);font-size:1.1=
-rem;max-width:600px;margin-bottom:50px}</div><div dir=3D"auto">.services-gr=
-id{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));ga=
-p:24px}</div><div dir=3D"auto">.service-card{background:var(--bg2);border:1=
-px solid rgba(255,255,255,.05);border-radius:16px;padding:36px;transition:a=
-ll .4s;position:relative;overflow:hidden}</div><div dir=3D"auto">.service-c=
-ard:hover{border-color:rgba(0,229,160,.2);transform:translateY(-4px);box-sh=
-adow:var(--glow)}</div><div dir=3D"auto">.service-icon{width:48px;height:48=
-px;border-radius:12px;background:rgba(0,229,160,.1);display:flex;align-item=
-s:center;justify-content:center;font-size:1.5rem;margin-bottom:20px}</div><=
-div dir=3D"auto">.service-card h3{font-size:1.25rem;font-weight:600;margin-=
-bottom:12px}</div><div dir=3D"auto">.service-card p{color:var(--text2);font=
--size:.95rem;line-height:1.6}</div><div dir=3D"auto">.stats{display:grid;gr=
-id-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;padding:60p=
-x 0;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba=
-(255,255,255,.05);margin:60px 0}</div><div dir=3D"auto">.stat{text-align:ce=
-nter}</div><div dir=3D"auto">.stat-number{font-size:2.5rem;font-weight:800;=
-background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-bac=
-kground-clip:text;-webkit-text-fill-color:transparent;background-clip:text}=
-</div><div dir=3D"auto">.stat-label{color:var(--text2);font-size:.9rem;marg=
-in-top:4px}</div><div dir=3D"auto">.products-grid{display:grid;grid-templat=
-e-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}</div><div dir=3D"aut=
-o">.product-card{background:var(--bg2);border:1px solid rgba(255,255,255,.0=
-5);border-radius:16px;overflow:hidden;transition:all .4s}</div><div dir=3D"=
-auto">.product-card:hover{border-color:rgba(0,194,255,.2);transform:transla=
-teY(-4px)}</div><div dir=3D"auto">.product-img{height:200px;background:line=
-ar-gradient(135deg,var(--bg3),var(--bg2));display:flex;align-items:center;j=
-ustify-content:center;font-size:3rem}</div><div dir=3D"auto">.product-info{=
-padding:24px}</div><div dir=3D"auto">.product-info h3{font-size:1.1rem;font=
--weight:600;margin-bottom:8px}</div><div dir=3D"auto">.product-info p{color=
-:var(--text2);font-size:.9rem;margin-bottom:16px}</div><div dir=3D"auto">.p=
-roduct-tag{display:inline-block;padding:4px 12px;border-radius:20px;font-si=
-ze:.75rem;font-weight:500;background:rgba(0,229,160,.1);color:var(--accent)=
-}</div><div dir=3D"auto">.cta{text-align:center;padding:100px 40px}</div><d=
-iv dir=3D"auto">.cta-box{background:linear-gradient(135deg,rgba(0,229,160,.=
-08),rgba(0,194,255,.08));border:1px solid rgba(0,229,160,.15);border-radius=
-:24px;padding:60px 40px;max-width:800px;margin:0 auto}</div><div dir=3D"aut=
-o">.cta-box h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;margin-bo=
-ttom:16px}</div><div dir=3D"auto">.cta-box p{color:var(--text2);font-size:1=
-.1rem;margin-bottom:32px}</div><div dir=3D"auto">.footer{padding:40px;text-=
-align:center;border-top:1px solid rgba(255,255,255,.05);color:var(--text3);=
-font-size:.85rem}</div><div dir=3D"auto">.footer a{color:var(--accent);text=
--decoration:none}</div><div dir=3D"auto">@media(max-width:768px){.header{pa=
-dding:16px 20px}.nav{display:none}.section{padding:60px 20px}.hero{padding:=
-100px 20px 60px}.hero h1{font-size:2.2rem}.cta-box{padding:40px 24px}}</div=
-><div dir=3D"auto">&lt;/style&gt;</div><div dir=3D"auto">&lt;/head&gt;</div=
-><div dir=3D"auto">&lt;body&gt;</div><div dir=3D"auto">&lt;header class=3D&=
-quot;header&quot;&gt;</div><div dir=3D"auto">&lt;div class=3D&quot;logo&quo=
-t;&gt;Ven&lt;span&gt;Bra&lt;/span&gt; Tech&lt;/div&gt;</div><div dir=3D"aut=
-o">&lt;nav class=3D&quot;nav&quot;&gt;</div><div dir=3D"auto">&lt;a href=3D=
-&quot;#services&quot;&gt;Services&lt;/a&gt;</div><div dir=3D"auto">&lt;a hr=
-ef=3D&quot;#products&quot;&gt;Products&lt;/a&gt;</div><div dir=3D"auto">&lt=
-;a href=3D&quot;#about&quot;&gt;About&lt;/a&gt;</div><div dir=3D"auto">&lt;=
-a href=3D&quot;#contact&quot; class=3D&quot;nav-btn&quot;&gt;Contact&lt;/a&=
-gt;</div><div dir=3D"auto">&lt;/nav&gt;</div><div dir=3D"auto">&lt;/header&=
-gt;</div><div dir=3D"auto">&lt;section class=3D&quot;hero&quot;&gt;</div><d=
-iv dir=3D"auto">&lt;div class=3D&quot;hero-badge&quot;&gt;Powered by AI&lt;=
-/div&gt;</div><div dir=3D"auto">&lt;h1&gt;Smart Digital&lt;br&gt;&lt;span c=
-lass=3D&quot;gradient&quot;&gt;Solutions&lt;/span&gt;&lt;/h1&gt;</div><div =
-dir=3D"auto">&lt;p&gt;AI tools, cybersecurity, digital products and curated=
- tech recommendations. Empowering your digital future.&lt;/p&gt;</div><div =
-dir=3D"auto">&lt;div class=3D&quot;hero-buttons&quot;&gt;</div><div dir=3D"=
-auto">&lt;a href=3D&quot;#services&quot; class=3D&quot;btn-primary&quot;&gt=
-;Explore Services&lt;/a&gt;</div><div dir=3D"auto">&lt;a href=3D&quot;#prod=
-ucts&quot; class=3D&quot;btn-secondary&quot;&gt;View Products&lt;/a&gt;</di=
-v><div dir=3D"auto">&lt;/div&gt;</div><div dir=3D"auto">&lt;/section&gt;</d=
-iv><div dir=3D"auto">&lt;section class=3D&quot;section&quot; id=3D&quot;ser=
-vices&quot;&gt;</div><div dir=3D"auto">&lt;div class=3D&quot;section-label&=
-quot;&gt;// What we do&lt;/div&gt;</div><div dir=3D"auto">&lt;h2 class=3D&q=
-uot;section-title&quot;&gt;Our Services&lt;/h2&gt;</div><div dir=3D"auto">&=
-lt;p class=3D&quot;section-desc&quot;&gt;Intelligent digital solutions desi=
-gned to protect, optimize, and elevate your tech experience.&lt;/p&gt;</div=
-><div dir=3D"auto">&lt;div class=3D&quot;services-grid&quot;&gt;</div><div =
-dir=3D"auto">&lt;div class=3D&quot;service-card&quot;&gt;&lt;div class=3D&q=
-uot;service-icon&quot;&gt;=F0=9F=A4=96&lt;/div&gt;&lt;h3&gt;AI Tools&lt;/h3=
-&gt;&lt;p&gt;Cutting-edge artificial intelligence tools to automate tasks, =
-analyze data, and boost your productivity.&lt;/p&gt;&lt;/div&gt;</div><div =
-dir=3D"auto">&lt;div class=3D&quot;service-card&quot;&gt;&lt;div class=3D&q=
-uot;service-icon&quot;&gt;=F0=9F=94=92&lt;/div&gt;&lt;h3&gt;Cybersecurity&l=
-t;/h3&gt;&lt;p&gt;Protect your digital assets with our advanced security so=
-lutions, vulnerability assessments, and monitoring.&lt;/p&gt;&lt;/div&gt;</=
-div><div dir=3D"auto">&lt;div class=3D&quot;service-card&quot;&gt;&lt;div c=
-lass=3D&quot;service-icon&quot;&gt;=F0=9F=92=BB&lt;/div&gt;&lt;h3&gt;Digita=
-l Products&lt;/h3&gt;&lt;p&gt;Curated selection of premium digital products=
-, software licenses, and tech resources for professionals.&lt;/p&gt;&lt;/di=
-v&gt;</div><div dir=3D"auto">&lt;div class=3D&quot;service-card&quot;&gt;&l=
-t;div class=3D&quot;service-icon&quot;&gt;=F0=9F=8C=8D&lt;/div&gt;&lt;h3&gt=
-;Travel Experiences&lt;/h3&gt;&lt;p&gt;Tech-enhanced travel experiences wit=
-h AI-powered recommendations and digital travel tools.&lt;/p&gt;&lt;/div&gt=
-;</div><div dir=3D"auto">&lt;div class=3D&quot;service-card&quot;&gt;&lt;di=
-v class=3D&quot;service-icon&quot;&gt;=F0=9F=93=8A&lt;/div&gt;&lt;h3&gt;Tec=
-h Consulting&lt;/h3&gt;&lt;p&gt;Expert guidance on technology adoption, dig=
-ital transformation, and IT infrastructure optimization.&lt;/p&gt;&lt;/div&=
-gt;</div><div dir=3D"auto">&lt;div class=3D&quot;service-card&quot;&gt;&lt;=
-div class=3D&quot;service-icon&quot;&gt;=E2=9A=A1&lt;/div&gt;&lt;h3&gt;Auto=
-mation&lt;/h3&gt;&lt;p&gt;Custom workflow automation solutions to save time=
- and reduce human error in your operations.&lt;/p&gt;&lt;/div&gt;</div><div=
- dir=3D"auto">&lt;/div&gt;</div><div dir=3D"auto">&lt;/section&gt;</div><di=
-v dir=3D"auto">&lt;div class=3D&quot;section&quot;&gt;</div><div dir=3D"aut=
-o">&lt;div class=3D&quot;stats&quot;&gt;</div><div dir=3D"auto">&lt;div cla=
-ss=3D&quot;stat&quot;&gt;&lt;div class=3D&quot;stat-number&quot;&gt;50+&lt;=
-/div&gt;&lt;div class=3D&quot;stat-label&quot;&gt;AI Tools Curated&lt;/div&=
-gt;&lt;/div&gt;</div><div dir=3D"auto">&lt;div class=3D&quot;stat&quot;&gt;=
-&lt;div class=3D&quot;stat-number&quot;&gt;99.9%&lt;/div&gt;&lt;div class=
-=3D&quot;stat-label&quot;&gt;Uptime Security&lt;/div&gt;&lt;/div&gt;</div><=
-div dir=3D"auto">&lt;div class=3D&quot;stat&quot;&gt;&lt;div class=3D&quot;=
-stat-number&quot;&gt;500+&lt;/div&gt;&lt;div class=3D&quot;stat-label&quot;=
-&gt;Happy Clients&lt;/div&gt;&lt;/div&gt;</div><div dir=3D"auto">&lt;div cl=
-ass=3D&quot;stat&quot;&gt;&lt;div class=3D&quot;stat-number&quot;&gt;24/7&l=
-t;/div&gt;&lt;div class=3D&quot;stat-label&quot;&gt;Support Available&lt;/d=
-iv&gt;&lt;/div&gt;</div><div dir=3D"auto">&lt;/div&gt;</div><div dir=3D"aut=
-o">&lt;/div&gt;</div><div dir=3D"auto">&lt;section class=3D&quot;section&qu=
-ot; id=3D&quot;products&quot;&gt;</div><div dir=3D"auto">&lt;div class=3D&q=
-uot;section-label&quot;&gt;// Featured&lt;/div&gt;</div><div dir=3D"auto">&=
-lt;h2 class=3D&quot;section-title&quot;&gt;Digital Products&lt;/h2&gt;</div=
-><div dir=3D"auto">&lt;p class=3D&quot;section-desc&quot;&gt;Hand-picked di=
-gital tools and products to power your workflow.&lt;/p&gt;</div><div dir=3D=
-"auto">&lt;div class=3D&quot;products-grid&quot;&gt;</div><div dir=3D"auto"=
->&lt;div class=3D&quot;product-card&quot;&gt;&lt;div class=3D&quot;product-=
-img&quot;&gt;=F0=9F=9B=A1=EF=B8=8F&lt;/div&gt;&lt;div class=3D&quot;product=
--info&quot;&gt;&lt;h3&gt;VenBra Shield&lt;/h3&gt;&lt;p&gt;Complete cybersec=
-urity suite for small businesses and freelancers.&lt;/p&gt;&lt;span class=
-=3D&quot;product-tag&quot;&gt;Security&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;=
-</div><div dir=3D"auto">&lt;div class=3D&quot;product-card&quot;&gt;&lt;div=
- class=3D&quot;product-img&quot;&gt;=F0=9F=A7=A0&lt;/div&gt;&lt;div class=
-=3D&quot;product-info&quot;&gt;&lt;h3&gt;AI Assistant Pro&lt;/h3&gt;&lt;p&g=
-t;Your personal AI assistant for daily tasks, research, and content creatio=
-n.&lt;/p&gt;&lt;span class=3D&quot;product-tag&quot;&gt;AI Tool&lt;/span&gt=
-;&lt;/div&gt;&lt;/div&gt;</div><div dir=3D"auto">&lt;div class=3D&quot;prod=
-uct-card&quot;&gt;&lt;div class=3D&quot;product-img&quot;&gt;=F0=9F=93=88&l=
-t;/div&gt;&lt;div class=3D&quot;product-info&quot;&gt;&lt;h3&gt;Data Analyt=
-ics Kit&lt;/h3&gt;&lt;p&gt;Powerful analytics dashboard to track and visual=
-ize your business metrics.&lt;/p&gt;&lt;span class=3D&quot;product-tag&quot=
-;&gt;Analytics&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</div><div dir=3D"auto">=
-&lt;/div&gt;</div><div dir=3D"auto">&lt;/section&gt;</div><div dir=3D"auto"=
->&lt;section class=3D&quot;section&quot; id=3D&quot;about&quot;&gt;</div><d=
-iv dir=3D"auto">&lt;div class=3D&quot;section-label&quot;&gt;// Who we are&=
-lt;/div&gt;</div><div dir=3D"auto">&lt;h2 class=3D&quot;section-title&quot;=
-&gt;About VenBra Tech&lt;/h2&gt;</div><div dir=3D"auto">&lt;p class=3D&quot=
-;section-desc&quot;&gt;We are a team passionate about technology and innova=
-tion. Our mission is to democratize access to intelligent digital solutions=
-, making AI tools, cybersecurity, and premium digital products accessible t=
-o everyone.&lt;/p&gt;</div><div dir=3D"auto">&lt;/section&gt;</div><div dir=
-=3D"auto">&lt;section class=3D&quot;cta&quot; id=3D&quot;contact&quot;&gt;<=
-/div><div dir=3D"auto">&lt;div class=3D&quot;cta-box&quot;&gt;</div><div di=
-r=3D"auto">&lt;h2&gt;Ready to Go Digital?&lt;/h2&gt;</div><div dir=3D"auto"=
->&lt;p&gt;Let&#39;s build your digital future together. Get in touch and di=
-scover how we can help.&lt;/p&gt;</div><div dir=3D"auto">&lt;a href=3D&quot=
-;mailto:<a href=3D"mailto:contact@venbratech.com">contact@venbratech.com</a=
->&quot; class=3D&quot;btn-primary&quot;&gt;Get Started&lt;/a&gt;</div><div =
-dir=3D"auto">&lt;/div&gt;</div><div dir=3D"auto">&lt;/section&gt;</div><div=
- dir=3D"auto">&lt;footer class=3D&quot;footer&quot;&gt;</div><div dir=3D"au=
-to">&lt;p&gt;&amp;copy; 2026 &lt;a href=3D&quot;#&quot;&gt;VenBra Tech&lt;/=
-a&gt;. All rights reserved. Powered by AI.&lt;/p&gt;</div><div dir=3D"auto"=
->&lt;/footer&gt;</div><div dir=3D"auto">&lt;/body&gt;</div><div dir=3D"auto=
-">&lt;/html&gt;</div></div>
-
---000000000000318109064f3209a1--
