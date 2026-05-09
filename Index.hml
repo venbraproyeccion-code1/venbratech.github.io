@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VenBra Tech — Smart Digital Solutions</title>
-<meta name="description" content="VenBra Tech: AI tools, cybersecurity, digital products and travel experiences.">
+<title>VenBra Tech — Tu Puerta a la Inversión Regulada</title>
+<meta name="description" content="Accede a ETFs, bienes raíces fraccionados y carteras diversificadas a través de plataformas reguladas por la SEC. La educación primero, siempre.">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a28;--accent:#00e5a0;--accent2:#00c2ff;--accent3:#7b61ff;--text:#e8e8f0;--text2:#9090a8;--text3:#606078;--glow:0 0 40px rgba(0,229,160,.15)}
+:root{--bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a28;--accent:#00e5a0;--accent2:#00c2ff;--accent3:#7b61ff;--gold:#f0c040;--text:#e8e8f0;--text2:#9090a8;--text3:#606078;--glow:0 0 40px rgba(0,229,160,.15)}
 html{scroll-behavior:smooth}
 body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
 .header{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(20px);background:rgba(10,10,15,.8);border-bottom:1px solid rgba(255,255,255,.05)}
@@ -19,20 +27,65 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);over
 .nav a{color:var(--text2);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .3s}
 .nav a:hover{color:var(--accent)}
 .nav-btn{background:var(--accent);color:var(--bg);padding:10px 24px;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .3s}
+.nav-btn:hover{opacity:.9;transform:translateY(-1px)}
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 20px 80px;position:relative}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:50px;background:rgba(0,229,160,.1);border:1px solid rgba(0,229,160,.2);color:var(--accent);font-size:.85rem;font-weight:500;margin-bottom:30px}
 .hero h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:800;line-height:1.1;margin-bottom:24px;letter-spacing:-2px}
 .hero h1 .gradient{background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero p{font-size:clamp(1rem,2vw,1.25rem);color:var(--text2);max-width:600px;margin-bottom:40px}
 .hero-buttons{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
-.btn-primary{background:var(--accent);color:var(--bg);padding:14px 32px;border-radius:10px;font-weight:600;font-size:1rem;text-decoration:none;transition:all .3s;border:none;cursor:pointer}
+.btn-primary{background:var(--accent);color:var(--bg);padding:14px 32px;border-radius:10px;font-weight:600;font-size:1rem;text-decoration:none;transition:all .3s;border:none;cursor:pointer;display:inline-block}
 .btn-primary:hover{box-shadow:var(--glow);transform:translateY(-2px)}
-.btn-secondary{background:transparent;color:var(--text);padding:14px 32px;border-radius:10px;font-weight:600;font-size:1rem;text-decoration:none;transition:all .3s;border:1px solid rgba(255,255,255,.15)}
+.btn-secondary{background:transparent;color:var(--text);padding:14px 32px;border-radius:10px;font-weight:600;font-size:1rem;text-decoration:none;transition:all .3s;border:1px solid rgba(255,255,255,.15);display:inline-block}
 .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#e0a820);color:#0a0a0f;padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem;text-decoration:none;transition:all .3s;border:none;cursor:pointer;display:inline-block}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(240,192,64,.3)}
 .section{padding:100px 40px;max-width:1200px;margin:0 auto}
 .section-label{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);text-transform:uppercase;letter-spacing:3px;margin-bottom:12px}
 .section-title{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-1px;margin-bottom:20px}
 .section-desc{color:var(--text2);font-size:1.1rem;max-width:600px;margin-bottom:50px}
+
+/* ===== INVESTMENT SECTION ===== */
+.investment-section{background:linear-gradient(180deg,var(--bg) 0%,rgba(0,229,160,.03) 50%,var(--bg) 100%);padding:100px 0}
+.investment-inner{max-width:1200px;margin:0 auto;padding:0 40px}
+.investment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:50px}
+.invest-card{background:var(--bg2);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:36px 28px;transition:all .4s;position:relative;overflow:hidden;text-decoration:none;display:block}
+.invest-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity .3s}
+.invest-card:hover{border-color:rgba(0,229,160,.25);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.invest-card:hover::before{opacity:1}
+.invest-logo{font-size:2.2rem;margin-bottom:16px}
+.invest-card h3{font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.invest-card .invest-type{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+.invest-card p{color:var(--text2);font-size:.9rem;line-height:1.6;margin-bottom:20px}
+.invest-commission{display:flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(0,229,160,.07);border-radius:8px;border:1px solid rgba(0,229,160,.12)}
+.invest-commission span{color:var(--accent);font-weight:600;font-size:.85rem}
+.invest-cta{margin-top:16px;color:var(--accent2);font-size:.9rem;font-weight:500;display:flex;align-items:center;gap:6px}
+.invest-disclaimer{margin-top:40px;padding:20px 24px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;color:var(--text3);font-size:.78rem;line-height:1.6}
+.invest-disclaimer strong{color:var(--text2)}
+
+/* ===== LEAD CAPTURE FORM ===== */
+.lead-section{background:linear-gradient(135deg,rgba(0,229,160,.06),rgba(123,97,255,.06));border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:100px 40px}
+.lead-inner{max-width:700px;margin:0 auto;text-align:center}
+.lead-inner h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;margin-bottom:12px;letter-spacing:-1px}
+.lead-inner p{color:var(--text2);font-size:1.05rem;margin-bottom:40px}
+.lead-form{display:flex;flex-direction:column;gap:16px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-input{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;color:var(--text);font-family:'Outfit',sans-serif;font-size:.95rem;width:100%;transition:all .3s;outline:none}
+.form-input:focus{border-color:var(--accent);background:rgba(0,229,160,.05);box-shadow:0 0 0 3px rgba(0,229,160,.08)}
+.form-input::placeholder{color:var(--text3)}
+.form-select{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px;color:var(--text);font-family:'Outfit',sans-serif;font-size:.95rem;width:100%;transition:all .3s;outline:none;cursor:pointer;appearance:none}
+.form-select:focus{border-color:var(--accent)}
+.form-select option{background:var(--bg2);color:var(--text)}
+.form-submit{background:linear-gradient(135deg,var(--accent),#00c270);color:var(--bg);padding:18px 32px;border-radius:12px;font-weight:700;font-size:1.05rem;border:none;cursor:pointer;transition:all .3s;letter-spacing:.3px}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(0,229,160,.3)}
+.form-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.form-msg{padding:16px 20px;border-radius:10px;font-size:.9rem;font-weight:500;display:none}
+.form-msg.success{background:rgba(0,229,160,.1);border:1px solid rgba(0,229,160,.25);color:var(--accent);display:block}
+.form-msg.error{background:rgba(255,80,80,.08);border:1px solid rgba(255,80,80,.2);color:#ff8080;display:block}
+.form-privacy{color:var(--text3);font-size:.78rem;margin-top:8px}
+.form-privacy a{color:var(--text2)}
+
+/* ===== SERVICES ===== */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
 .service-card{background:var(--bg2);border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:36px;transition:all .4s;position:relative;overflow:hidden}
 .service-card:hover{border-color:rgba(0,229,160,.2);transform:translateY(-4px);box-shadow:var(--glow)}
@@ -43,87 +96,202 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);over
 .stat{text-align:center}
 .stat-number{font-size:2.5rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat-label{color:var(--text2);font-size:.9rem;margin-top:4px}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.product-card{background:var(--bg2);border:1px solid rgba(255,255,255,.05);border-radius:16px;overflow:hidden;transition:all .4s}
-.product-card:hover{border-color:rgba(0,194,255,.2);transform:translateY(-4px)}
-.product-img{height:200px;background:linear-gradient(135deg,var(--bg3),var(--bg2));display:flex;align-items:center;justify-content:center;font-size:3rem}
-.product-info{padding:24px}
-.product-info h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
-.product-info p{color:var(--text2);font-size:.9rem;margin-bottom:16px}
-.product-tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:500;background:rgba(0,229,160,.1);color:var(--accent)}
-.cta{text-align:center;padding:100px 40px}
-.cta-box{background:linear-gradient(135deg,rgba(0,229,160,.08),rgba(0,194,255,.08));border:1px solid rgba(0,229,160,.15);border-radius:24px;padding:60px 40px;max-width:800px;margin:0 auto}
-.cta-box h2{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;margin-bottom:16px}
-.cta-box p{color:var(--text2);font-size:1.1rem;margin-bottom:32px}
 .footer{padding:40px;text-align:center;border-top:1px solid rgba(255,255,255,.05);color:var(--text3);font-size:.85rem}
 .footer a{color:var(--accent);text-decoration:none}
-@media(max-width:768px){.header{padding:16px 20px}.nav{display:none}.section{padding:60px 20px}.hero{padding:100px 20px 60px}.hero h1{font-size:2.2rem}.cta-box{padding:40px 24px}}
+@media(max-width:768px){
+  .header{padding:16px 20px}
+  .nav{display:none}
+  .section{padding:60px 20px}
+  .investment-inner{padding:0 20px}
+  .lead-section{padding:60px 20px}
+  .hero{padding:100px 20px 60px}
+  .hero h1{font-size:2.2rem}
+  .form-row{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
+
 <header class="header">
-<div class="logo">Ven<span>Bra</span> Tech</div>
-<nav class="nav">
-<a href="#services">Services</a>
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#contact" class="nav-btn">Contact</a>
-</nav>
+  <div class="logo">Ven<span>Bra</span> Tech</div>
+  <nav class="nav">
+    <a href="#investment">Inversión</a>
+    <a href="#services">Servicios</a>
+    <a href="#about">Nosotros</a>
+    <a href="#lead-form" class="nav-btn">Empieza Gratis</a>
+  </nav>
 </header>
+
 <section class="hero">
-<div class="hero-badge">Powered by AI</div>
-<h1>Smart Digital<br><span class="gradient">Solutions</span></h1>
-<p>AI tools, cybersecurity, digital products and curated tech recommendations. Empowering your digital future.</p>
-<div class="hero-buttons">
-<a href="#services" class="btn-primary">Explore Services</a>
-<a href="#products" class="btn-secondary">View Products</a>
-</div>
+  <div class="hero-badge">✦ Plataforma regulada por la SEC</div>
+  <h1>Tu puerta de entrada a<br><span class="gradient">la inversión regulada</span></h1>
+  <p>Accede a ETFs, bienes raíces fraccionados y carteras diversificadas a través de plataformas de confianza reguladas por la SEC. La educación primero, siempre.</p>
+  <div class="hero-buttons">
+    <a href="#investment" class="btn-gold">Ver Plataformas →</a>
+    <a href="#lead-form" class="btn-secondary">Recibir guía gratuita</a>
+  </div>
 </section>
+
+<!-- ===== INVESTMENT SECTION ===== -->
+<div class="investment-section" id="investment">
+  <div class="investment-inner">
+    <div class="section-label">// Plataformas recomendadas</div>
+    <h2 class="section-title">Invierte con plataformas reguladas</h2>
+    <p class="section-desc">Seleccionamos solo plataformas reguladas por la SEC y FINRA, accesibles para hispanohablantes en todo el mundo.</p>
+
+    <div class="investment-grid">
+
+      <a href="LINK_AFILIADO_WEBULL" target="_blank" rel="noopener" class="invest-card">
+        <div class="invest-logo">📈</div>
+        <div class="invest-type">Acciones · ETFs · Opciones</div>
+        <h3>Webull</h3>
+        <p>Broker regulado por la SEC y FINRA. Comisiones $0, herramientas profesionales y acceso a mercados en tiempo real.</p>
+        <div class="invest-commission"><span>🎁 Hasta 12 acciones gratis al abrir cuenta</span></div>
+        <div class="invest-cta">Abrir cuenta gratis →</div>
+      </a>
+
+      <a href="LINK_AFILIADO_PUBLIC" target="_blank" rel="noopener" class="invest-card">
+        <div class="invest-logo">🏛️</div>
+        <div class="invest-type">Acciones · ETFs · Bonos · Crypto</div>
+        <h3>Public.com</h3>
+        <p>Invierte en acciones, ETFs, bonos del tesoro y crypto en una sola plataforma. Sin comisiones en acciones y ETFs.</p>
+        <div class="invest-commission"><span>🎁 Bono de bienvenida hasta $300</span></div>
+        <div class="invest-cta">Abrir cuenta gratis →</div>
+      </a>
+
+      <a href="LINK_AFILIADO_ARRIVED" target="_blank" rel="noopener" class="invest-card">
+        <div class="invest-logo">🏠</div>
+        <div class="invest-type">Bienes Raíces Fraccionados</div>
+        <h3>Arrived Homes</h3>
+        <p>Invierte en propiedades residenciales desde $100. Recibe ingresos por alquiler y apreciación sin ser propietario.</p>
+        <div class="invest-commission"><span>💰 Desde $100 · Rentabilidad histórica 5–7%</span></div>
+        <div class="invest-cta">Explorar propiedades →</div>
+      </a>
+
+      <a href="LINK_AFILIADO_FUNDRISE" target="_blank" rel="noopener" class="invest-card">
+        <div class="invest-logo">🏗️</div>
+        <div class="invest-type">Real Estate · Fondos Privados</div>
+        <h3>Fundrise</h3>
+        <p>Portafolios diversificados de bienes raíces comerciales y residenciales. Inversión mínima desde $10.</p>
+        <div class="invest-commission"><span>💰 Desde $10 · 90 días sin comisión de gestión</span></div>
+        <div class="invest-cta">Ver portafolios →</div>
+      </a>
+
+    </div>
+
+    <div class="invest-disclaimer">
+      <strong>⚠️ Divulgación requerida:</strong> VenBra Tech puede recibir compensación cuando abres una cuenta a través de nuestros enlaces. Esto no afecta nuestras recomendaciones. Invertir implica riesgos, incluyendo la posible pérdida del capital. El rendimiento pasado no garantiza resultados futuros. Las plataformas listadas están reguladas por la SEC y/o FINRA. No somos asesores financieros registrados. Consulta a un profesional antes de invertir.
+    </div>
+  </div>
+</div>
+
+<!-- ===== LEAD CAPTURE FORM ===== -->
+<div class="lead-section" id="lead-form">
+  <div class="lead-inner">
+    <div class="section-label" style="text-align:center">// Acceso gratuito</div>
+    <h2>Recibe tu guía de inversión <span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">personalizada</span></h2>
+    <p>Completa el formulario y te enviamos una guía gratuita con las mejores plataformas según tu perfil de inversor.</p>
+
+    <form class="lead-form" id="leadForm">
+      <div class="form-row">
+        <input type="text" class="form-input" id="leadName" placeholder="Tu nombre completo" required>
+        <input type="tel" class="form-input" id="leadPhone" placeholder="WhatsApp / Teléfono">
+      </div>
+      <input type="email" class="form-input" id="leadEmail" placeholder="Tu correo electrónico" required>
+      <select class="form-select" id="leadInterest">
+        <option value="financial">💹 Interesado en inversión (Webull, Public, Fundrise)</option>
+        <option value="health">🏥 Interesado en salud y bienestar</option>
+        <option value="both">🌟 Ambos temas me interesan</option>
+      </select>
+      <button type="submit" class="form-submit" id="submitBtn">
+        Quiero mi guía gratuita →
+      </button>
+      <div class="form-msg" id="formMsg"></div>
+      <p class="form-privacy">🔒 Tu información es privada. No compartimos tus datos. Puedes darte de baja en cualquier momento.</p>
+    </form>
+  </div>
+</div>
+
+<!-- ===== SERVICES ===== -->
 <section class="section" id="services">
-<div class="section-label">// What we do</div>
-<h2 class="section-title">Our Services</h2>
-<p class="section-desc">Intelligent digital solutions designed to protect, optimize, and elevate your tech experience.</p>
-<div class="services-grid">
-<div class="service-card"><div class="service-icon">🤖</div><h3>AI Tools</h3><p>Cutting-edge artificial intelligence tools to automate tasks, analyze data, and boost your productivity.</p></div>
-<div class="service-card"><div class="service-icon">🔒</div><h3>Cybersecurity</h3><p>Protect your digital assets with our advanced security solutions, vulnerability assessments, and monitoring.</p></div>
-<div class="service-card"><div class="service-icon">💻</div><h3>Digital Products</h3><p>Curated selection of premium digital products, software licenses, and tech resources for professionals.</p></div>
-<div class="service-card"><div class="service-icon">🌍</div><h3>Travel Experiences</h3><p>Tech-enhanced travel experiences with AI-powered recommendations and digital travel tools.</p></div>
-<div class="service-card"><div class="service-icon">📊</div><h3>Tech Consulting</h3><p>Expert guidance on technology adoption, digital transformation, and IT infrastructure optimization.</p></div>
-<div class="service-card"><div class="service-icon">⚡</div><h3>Automation</h3><p>Custom workflow automation solutions to save time and reduce human error in your operations.</p></div>
-</div>
+  <div class="section-label">// Lo que hacemos</div>
+  <h2 class="section-title">Nuestros Servicios</h2>
+  <p class="section-desc">Soluciones digitales inteligentes diseñadas para proteger, optimizar y elevar tu experiencia financiera.</p>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-icon">📊</div><h3>Educación Financiera</h3><p>Contenido educativo sobre inversión, mercados regulados y estrategias de construcción de patrimonio para hispanohablantes.</p></div>
+    <div class="service-card"><div class="service-icon">🤖</div><h3>Herramientas de IA</h3><p>Herramientas de inteligencia artificial para automatizar tareas, analizar datos y potenciar tu productividad.</p></div>
+    <div class="service-card"><div class="service-icon">🔒</div><h3>Ciberseguridad</h3><p>Protege tus activos digitales con nuestras soluciones avanzadas de seguridad y monitoreo.</p></div>
+    <div class="service-card"><div class="service-icon">🌍</div><h3>Experiencias de Viaje</h3><p>Experiencias de viaje mejoradas con tecnología y recomendaciones impulsadas por IA.</p></div>
+    <div class="service-card"><div class="service-icon">📱</div><h3>Productos Digitales</h3><p>Selección curada de productos digitales premium, licencias de software y recursos tecnológicos.</p></div>
+    <div class="service-card"><div class="service-icon">⚡</div><h3>Automatización</h3><p>Soluciones de automatización de flujos de trabajo para ahorrar tiempo y reducir el error humano.</p></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-number">4+</div><div class="stat-label">Plataformas reguladas SEC</div></div>
+    <div class="stat"><div class="stat-number">$10</div><div class="stat-label">Mínimo para empezar</div></div>
+    <div class="stat"><div class="stat-number">0%</div><div class="stat-label">Comisión en acciones</div></div>
+    <div class="stat"><div class="stat-number">24/7</div><div class="stat-label">Soporte disponible</div></div>
+  </div>
 </section>
-<div class="section">
-<div class="stats">
-<div class="stat"><div class="stat-number">50+</div><div class="stat-label">AI Tools Curated</div></div>
-<div class="stat"><div class="stat-number">99.9%</div><div class="stat-label">Uptime Security</div></div>
-<div class="stat"><div class="stat-number">500+</div><div class="stat-label">Happy Clients</div></div>
-<div class="stat"><div class="stat-number">24/7</div><div class="stat-label">Support Available</div></div>
-</div>
-</div>
-<section class="section" id="products">
-<div class="section-label">// Featured</div>
-<h2 class="section-title">Digital Products</h2>
-<p class="section-desc">Hand-picked digital tools and products to power your workflow.</p>
-<div class="products-grid">
-<div class="product-card"><div class="product-img">🛡️</div><div class="product-info"><h3>VenBra Shield</h3><p>Complete cybersecurity suite for small businesses and freelancers.</p><span class="product-tag">Security</span></div></div>
-<div class="product-card"><div class="product-img">🧠</div><div class="product-info"><h3>AI Assistant Pro</h3><p>Your personal AI assistant for daily tasks, research, and content creation.</p><span class="product-tag">AI Tool</span></div></div>
-<div class="product-card"><div class="product-img">📈</div><div class="product-info"><h3>Data Analytics Kit</h3><p>Powerful analytics dashboard to track and visualize your business metrics.</p><span class="product-tag">Analytics</span></div></div>
-</div>
-</section>
+
+<!-- ===== ABOUT ===== -->
 <section class="section" id="about">
-<div class="section-label">// Who we are</div>
-<h2 class="section-title">About VenBra Tech</h2>
-<p class="section-desc">We are a team passionate about technology and innovation. Our mission is to democratize access to intelligent digital solutions, making AI tools, cybersecurity, and premium digital products accessible to everyone.</p>
+  <div class="section-label">// Quiénes somos</div>
+  <h2 class="section-title">Acerca de VenBra Tech</h2>
+  <p class="section-desc">Somos un equipo apasionado por democratizar el acceso a la inversión regulada para la comunidad hispanohablante. Nuestra misión es hacer accesibles las plataformas reguladas por la SEC que hasta ahora parecían exclusivas para grandes inversores.</p>
 </section>
-<section class="cta" id="contact">
-<div class="cta-box">
-<h2>Ready to Go Digital?</h2>
-<p>Let's build your digital future together. Get in touch and discover how we can help.</p>
-<a href="mailto:contact@venbratech.com" class="btn-primary">Get Started</a>
-</div>
-</section>
+
 <footer class="footer">
-<p>&copy; 2026 <a href="#">VenBra Tech</a>. All rights reserved. Powered by AI.</p>
+  <p>&copy; 2026 <a href="#">VenBra Tech</a>. Todos los derechos reservados. Powered by AI. | <a href="mailto:contact@venbratech.com">contact@venbratech.com</a></p>
+  <p style="margin-top:8px;font-size:.75rem">Las inversiones conllevan riesgo. VenBra Tech no es un asesor financiero registrado. Este sitio puede contener enlaces de afiliados.</p>
 </footer>
+
+<script>
+document.getElementById('leadForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('formMsg');
+  const name = document.getElementById('leadName').value.trim();
+  const email = document.getElementById('leadEmail').value.trim();
+  const phone = document.getElementById('leadPhone').value.trim();
+  const interest = document.getElementById('leadInterest').value;
+
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+  msg.className = 'form-msg';
+  msg.style.display = 'none';
+
+  try {
+    const res = await fetch('https://primary-production-a1d21.up.railway.app/webhook/venbrax-lead', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        phone: phone,
+        interest: interest,
+        utm_source: 'venbratech_site'
+      })
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      msg.textContent = '✅ ¡Perfecto! Revisa tu correo en los próximos minutos con tu guía personalizada.';
+      msg.className = 'form-msg success';
+      document.getElementById('leadForm').reset();
+      if(typeof gtag !== 'undefined') gtag('event', 'lead_captured', {event_category: 'form', event_label: interest});
+    } else {
+      throw new Error('Error del servidor');
+    }
+  } catch(err) {
+    msg.textContent = '⚠️ Hubo un problema al enviar. Intenta de nuevo o escríbenos a contact@venbratech.com';
+    msg.className = 'form-msg error';
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Quiero mi guía gratuita →';
+});
+</script>
+
 </body>
 </html>
