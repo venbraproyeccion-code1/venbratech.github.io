@@ -168,13 +168,13 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);over
         <div class="invest-cta">Explorar propiedades →</div>
       </a>
 
-      <a href="LINK_AFILIADO_FUNDRISE" target="_blank" rel="noopener" class="invest-card">
-        <div class="invest-logo">🏗️</div>
-        <div class="invest-type">Real Estate · Fondos Privados</div>
-        <h3>Fundrise</h3>
-        <p>Portafolios diversificados de bienes raíces comerciales y residenciales. Inversión mínima desde $10.</p>
-        <div class="invest-commission"><span>💰 Desde $10 · 90 días sin comisión de gestión</span></div>
-        <div class="invest-cta">Ver portafolios →</div>
+      <a href="LINK_AFILIADO_XTB" target="_blank" rel="noopener" class="invest-card">
+        <div class="invest-logo">📊</div>
+        <div class="invest-type">Forex · Acciones · ETFs · Crypto</div>
+        <h3>XTB</h3>
+        <p>Broker europeo regulado con más de 5,800 instrumentos. Plataforma xStation disponible en español, sin comisión en acciones.</p>
+        <div class="invest-commission"><span>🌎 Disponible en Latinoamérica · $0 comisión en acciones</span></div>
+        <div class="invest-cta">Abrir cuenta gratis →</div>
       </a>
 
     </div>
