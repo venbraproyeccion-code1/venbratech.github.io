@@ -34,6 +34,27 @@ sesión de Claude Code que trabaje aquí sigue estas reglas fijas:
   y Estado del Sistema" + actualizaciones fechadas (ver carpeta raíz del
   Drive de venbraproyeccion@gmail.com).
 
+## Continuidad entre sesiones — leer esto primero
+
+Cualquier sesión nueva (Claude Code u otra) debe empezar leyendo, en este
+orden, los docs de Google Drive en la carpeta raíz de
+venbraproyeccion@gmail.com:
+
+1. "VenBraX — Handoff y Estado del Sistema" (contexto general, arquitectura).
+2. "VenBraX — Corrección de Estado: Dedicación 100% al Ecosistema" (Alfonso
+   ya no trabaja en Kellanova desde marzo 2026, dedicación 100% al proyecto).
+3. "VenBraX — Actualización de Sesión 2026-07-10" (sitio web, PR, Telegram bot).
+4. "VenBraX — Inventario Secret Manager 2026-07-10" (qué API keys existen,
+   sus nombres en Secret Manager — nunca los valores).
+5. "VenBraX — Guayaba Galáctica: Setup Facebook/Instagram API 2026-07-10"
+   (estado exacto del bloqueador pendiente: token de usuario del sistema
+   `n8n-venbrax-bot` creado y guardado como secreto `facebook-system-user-token`,
+   esperando que Meta propague permisos — última prueba dio error #100).
+
+No asumir que "estoy aquí" o un mensaje corto del usuario ya trae este
+contexto — pedirle que confirme qué se resolvió desde el último doc antes
+de seguir, en vez de repetir pasos ya hechos.
+
 ## Monetización
 
 - "Tokenizar" en este proyecto significa un sistema de puntos/recompensas
